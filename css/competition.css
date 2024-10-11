@@ -1,0 +1,225 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.competition-banner {
+    background-image: url('../img/logo.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.competition-banner h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.competition-banner p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.tournament-info {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.tournament-info h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.tournament-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.tournament-info img {
+    width: 800px;
+    height: 400px;
+}
+
+.calendar {
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.calendar h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.calendar p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.calendar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.calendar ul li {
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-left: 300px;
+}
+
+.registration {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.registration h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.registration p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.registration form {
+    display: inline-block;
+    text-align: left;
+}
+
+.registration label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.registration input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.registration .btn {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+}
+
+.registration .btn:hover {
+    background-color: #45a049;
+}
+
+.rules {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.rules h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.rules p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.rules ul {
+    list-style-type: disc;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+.rules ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.rules a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.rules a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width:768px) {
+    .calendar ul li {
+        margin-left: 60px;
+    }
+
+    .tournament-info img {
+        width: 350px;
+        height: 300px;
+    }
+}

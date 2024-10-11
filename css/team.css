@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Bannière de l'équipe */
+.team-banner {
+    background-image: url('../img/logo.jpg');
+    /* Remplacez par l'URL de votre image */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.team-banner h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.team-banner p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Détails de l'équipe */
+.team-details {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.team-details h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Informations générales sur l'équipe */
+.team-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.team-photo {
+    width: 300px;
+    margin-right: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-description {
+    max-width: 600px;
+    text-align: left;
+}
+
+.team-description h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.team-description p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.team-description ul {
+    list-style: none;
+    padding: 0;
+}
+
+.team-description ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Parcours dans le tournoi */
+.team-progress {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: left;
+}
+
+.team-progress h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.team-progress p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.team-progress ul {
+    list-style: disc inside;
+    font-size: 16px;
+}
+
+/* Photos des membres de l'équipe */
+.team-photos {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.team-photos h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.team-photos img {
+    width: 180px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}

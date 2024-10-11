@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Bannière de la page Résultats */
+.results-banner {
+    background-image: url('../img/logo.jpg');
+    /* Remplacez par l'URL de votre image */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.results-banner h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.results-banner p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Tableau des Scores */
+.scores-section {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.scores-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.scores-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    border-collapse: collapse;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.scores-table th,
+.scores-table td {
+    padding: 15px;
+    border: 1px solid black;
+}
+
+.scores-table th {
+    background-color: #3498db;
+    font-weight: bold;
+}
+
+/* Historique des Matchs */
+.matches-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.matches-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.match-card {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.match-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.match-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+.stats-section {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.stats-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.stat {
+    width: 200px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.stat p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width:768px) {
+    .scores-section {
+        background-color: white;
+        text-align: center;
+    }
+
+    .scores-section h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+        padding: 50px 20px;
+    }
+
+    .scores-table {}
+
+    .scores-table th,
+    .scores-table td {
+        padding: 12px;
+        border: 1px solid black;
+    }
+}

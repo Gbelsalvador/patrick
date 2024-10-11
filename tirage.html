@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirage au sort des écoles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        #numbers {
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .chapeau {
+            display: inline-block;
+            width: 45%;
+            margin: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #tirage-btn {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 16px;
+        }
+
+        #paniers {
+            margin-top: 40px;
+        }
+
+        #paniers-list {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        #paniers-list .panier {
+            background-color: #e9ecef;
+            padding: 10px;
+            border: 1px solid #ccc;
+            width: 18%;
+            border-radius: 5px;
+        }
+
+        /* Styles pour l'animation du cercle */
+        #spinner {
+            display: none;
+            margin: 20px auto;
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #007bff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tirage au sort des écoles</h1>
+
+    <div id="choices">
+        <h2>Choisissez un numéro pour révéler l'école</h2>
+        <div id="numbers">
+            <!-- 10 boutons pour choisir un chiffre -->
+        </div>
+    </div>
+
+    <div id="chapeaux">
+        <h2>Chapeaux</h2>
+        <div id="chapeau1" class="chapeau">
+            <h3>Chapeau 1</h3>
+            <ul id="chapeau1-list"></ul>
+        </div>
+        <div id="chapeau2" class="chapeau">
+            <h3>Chapeau 2</h3>
+            <ul id="chapeau2-list"></ul>
+        </div>
+
+    </div>
+
+    <button id="tirage-btn">Lancer le tirage</button>
+
+
+    <div id="spinner"></div>
+
+    <div id="paniers">
+        <h2>Paniers</h2>
+        <div id="paniers-list">
+
+        </div>
+    </div>
+
+    <script>
+        const ecoles = [
+            "école marcello zago", "école saint etienne", "école notre dame du congo", "école iti-bumbu", "école gamaliel",
+            "École lumumba", "École maman wa boboto", "école christie", "école saint jean baptiste", "école gstm",
+            "école moke", "écoles vincent de paul", "école mosengo", "école boboto", "école bobokoli", "école athene gombe", "école safara",
+            "école mont-amba", "école verbum", "école kabambabare"
+        ];
+
+
+        let chapeau1 = [];
+        let chapeau2 = [];
+
+
+        const numbersDiv = document.getElementById("numbers");
+        const chapeau1List = document.getElementById("chapeau1-list");
+        const chapeau2List = document.getElementById("chapeau2-list");
+
+        const tirageBtn = document.getElementById("tirage-btn");
+        const paniersList = document.getElementById("paniers-list");
+        const spinner = document.getElementById("spinner");
+
+
+        for (let i = 1; i <= 20; i++) {
+            const btn = document.createElement("button");
+            btn.textContent = i;
+            btn.onclick = () => revelerEcole(i - 1);
+            numbersDiv.appendChild(btn);
+        }
+
+
+        function revelerEcole(index) {
+            const ecole = ecoles[index];
+
+
+            if (chapeau1.length < 10) {
+                chapeau1.push(ecole);
+                ajouterAuChapeau(chapeau1List, ecole);
+            } else if (chapeau2.length < 10) {
+                chapeau2.push(ecole);
+                ajouterAuChapeau(chapeau2List, ecole);
+            }
+
+            document.querySelectorAll("#numbers button")[index].disabled = true;
+        }
+
+
+        function ajouterAuChapeau(liste, ecole) {
+            const li = document.createElement("li");
+            li.textContent = ecole;
+            liste.appendChild(li);
+        }
+
+
+        tirageBtn.onclick = () => {
+            if (chapeau1.length === 10 && chapeau2.length === 10) {
+                lancerTirage();
+            } else {
+                alert("Veuillez classer toutes les écoles avant de lancer le tirage.");
+            }
+        };
+
+
+        function lancerTirage() {
+            const paniers = [[], [], [], [], []];
+            const toutesEcoles = [...chapeau1, ...chapeau2];
+
+
+            let i = 0;
+            function tirage() {
+                if (i < 20) {
+                    spinner.style.display = "block";
+
+                    setTimeout(() => {
+                        spinner.style.display = "none";
+                        const panierIndex = i % 5;
+
+                        const ecoleIndex = Math.floor(Math.random() * toutesEcoles.length);
+                        const ecole = toutesEcoles.splice(ecoleIndex, 1)[0];
+                        paniers[panierIndex].push(ecole);
+
+                        afficherPaniers(paniers);
+                        i++;
+                        tirage();  // 
+                    }, 2000);  //
+                }
+            }
+            tirage();
+        }
+
+
+        function afficherPaniers(paniers) {
+            paniersList.innerHTML = "";
+            paniers.forEach((panier, index) => {
+                const div = document.createElement("div");
+                div.classList.add("panier");
+                div.innerHTML = `<h4>Panier ${index + 1}</h4>`;
+                panier.forEach(ecole => {
+                    const p = document.createElement("p");
+                    p.textContent = ecole;
+                    div.appendChild(p);
+                });
+                paniersList.appendChild(div);
+            });
+        }
+    </script>
+</body>
+
+</html>

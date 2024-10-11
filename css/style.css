@@ -1,0 +1,229 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Bannière principale */
+.banner {
+    background-image: url('../img/logo.jpg');
+    /* Remplacez par l'URL de votre image */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.banner .btn {
+    background-color: #e74c3c;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.banner .btn:hover {
+    background-color: #c0392b;
+}
+
+/* Section à propos */
+.about {
+    color: black;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Section Liens Rapides */
+.quick-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+.link-card {
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.link-card:hover {
+    transform: scale(1.05);
+}
+
+.link-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.link-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.link-card .btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.link-card .btn:hover {
+    background-color: #c0392b;
+}
+
+/* Section Actualités */
+.news {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.news h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.news-card {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.news-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.news-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+a.btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a.btn:hover {
+    background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width:768px) {
+    .quick-links {
+        display: block;
+
+    }
+
+    .link-card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        width: 70%;
+        margin-left: 20px;
+        margin-top: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .link-card:hover {
+        transform: scale(1.05);
+
+
+    }
+}

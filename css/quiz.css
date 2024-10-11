@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+}
+
+.pdf-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.pdf-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+
+}
+
+.pdf-list li a {
+    margin-left: 20%;
+}
+
+.pdf-list a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.pdf-list a:hover {
+    color: #0056b3;
+}

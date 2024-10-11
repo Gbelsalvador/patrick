@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Bannière de la page équipes */
+.teams-banner {
+    background-image: url('../img/logo.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.teams-banner h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.teams-banner p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Section Liste des Équipes */
+.teams-list {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.team {
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.team img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.team h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.team p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Adaptation pour les appareils de tailles plus petites */
+@media (max-width: 768px) {
+
+    .teams-banner h1 {
+        font-size: 32px;
+    }
+
+    .teams-banner p {
+        font-size: 18px;
+    }
+
+    .team {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Pour les écrans très petits (smartphones) */
+@media (max-width: 480px) {
+    .teams-banner {
+        padding: 50px 10px;
+    }
+
+    .teams-list {
+        padding: 20px 10px;
+    }
+
+    .teams-banner h1 {
+        font-size: 24px;
+    }
+
+    .teams-banner p {
+        font-size: 16px;
+    }
+
+    .team h3 {
+        font-size: 20px;
+    }
+
+    .team p {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    footer .social-media a {
+        margin: 0 5px;
+    }
+}
